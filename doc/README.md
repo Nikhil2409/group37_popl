@@ -84,7 +84,7 @@ Conclusion:
 - In C++, developers need to add explicit synchronization for thread safety and use smart pointers for safer memory management.
 
 
-#Potential for future work
+# Potential for future work
 
 The provided code implements a simple two-layer feedforward neural network with sigmoid activation functions. It can be further enhanced by incorporating additional features and techniques:
 
