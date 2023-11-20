@@ -46,3 +46,40 @@ The predict method in the NeuralNetwork struct handles making predictions based 
 4. Main Function:
 
 The main function serves as the entry point of the program. It initializes the neural network, trains it on XOR data, measures training time, and then tests the trained network on additional input data, printing the predictions.
+
+# Results and Analysis
+
+Rust Code:
+Thread Safety:
+-Ownership System: Rust's ownership system ensures thread safety by preventing multiple threads from having mutable references to data. Ownership and borrowing rules are enforced at compile-time.
+Code Reference:
+fn train(&mut self, inputs: &Vec<Vec<f64>>, targets: &Vec<Vec<f64>>, epochs: usize, learning_rate: f64) { /* ... */ }
+
+ Memory Safety:
+- Vector Bounds Checking: Rust enforces bounds checking on vectors at runtime.
+  - Reference: [`Rust Vector`] (https://doc.rust-lang.org/std/vec/struct.Vec.html)
+- No Unsafe Blocks: The absence of `unsafe` blocks indicates that there are no low-level memory safety concerns.
+Code Reference: 
+let mut layer1_output = vec![0.0; self.weights_input_hidden[0].len()];
+
+ C++ Code:
+
+ Thread Safety:
+  - Lack of Synchronization: The C++ code lacks explicit synchronization mechanisms for thread safety during weight updates.
+  - Synchronization mechanisms, like mutexes, can be added as in the reference.
+  - Reference: [`std::mutex`](https://en.cppreference.com/w/cpp/thread/mutex).
+Code Reference: 
+void train(vector<vector<double>>& inputs, vector<vector<double>>& targets, size_t epochs, double learning_rate) { /* ... */ }
+
+Memory Safety:
+  - Manual Memory Management: C++ allows manual memory management, introducing the risk of memory leaks and dangling pointers.
+  - Smart pointers, such as `std::unique_ptr` or `std::shared_ptr`, can be used for safer memory management.
+  - Reference: [std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr), [std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr)
+  -Vector Bounds Checking: C++ does not perform bounds checking on vectors by default. Developers must ensure proper bounds checking.
+  -Reference: [std::vector](https://en.cppreference.com/w/cpp/container/vector)
+- Potential for Use-After-Free: Use smart pointers or careful memory management to prevent use-after-free errors.
+
+Conclusion:
+- Rust provides strong thread safety guarantees through its ownership system, and memory safety is enforced through mechanisms like bounds checking.
+- In C++, developers need to add explicit synchronization for thread safety and use smart pointers for safer memory management.
+
