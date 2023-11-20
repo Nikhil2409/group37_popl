@@ -1,8 +1,8 @@
-# Project Description
+# Problem Statement
 
 The problem statement in this code is to implement a simple neural network and train it to perform logical XOR operations. The neural network has an input layer with 2 nodes, a hidden layer with 4 nodes, and an output layer with 1 node. The code uses a sigmoid activation function and its derivative for the network's activation.
 
-Several principles related to programming languages and neural network implementation are used in our code:
+# Concepts of POPL used
 
 1. Abstraction:
    - The code uses a struct (`NeuralNetwork`) to encapsulate the properties and behavior of a neural network. This is an example of abstraction, where the complexity of the neural network is hidden behind a simplified interface.
@@ -30,3 +30,19 @@ Several principles related to programming languages and neural network implement
  
 These principles contribute to writing clean, maintainable, and efficient code, aligning with the broader principles of programming languages. Additionally, the specific principles of neural network implementation, such as backpropagation for training, are reflected in the code to achieve the desired learning behavior
 
+
+# Software Architecture:
+
+1. Neural Network Module:
+
+The core of the solution is the NeuralNetwork struct, which encapsulates the neural network's weights, activation functions, training, and prediction methods.
+
+2. Training Module:
+The train method within the NeuralNetwork struct is responsible for training the neural network using backpropagation. It takes input data, target data, and hyperparameters like the number of epochs and learning rate.
+
+3. Prediction Module:
+The predict method in the NeuralNetwork struct handles making predictions based on the trained weights.
+
+4. Main Function:
+
+The main function serves as the entry point of the program. It initializes the neural network, trains it on XOR data, measures training time, and then tests the trained network on additional input data, printing the predictions.
