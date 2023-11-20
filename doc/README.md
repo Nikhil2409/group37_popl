@@ -115,3 +115,32 @@ Conclusion:
   - In C++, developers need to add explicit synchronization for thread safety and use smart 
   pointers for safer memory management.
 
+#Potential for Future work
+
+The provided code implements a simple two-layer feedforward neural network with sigmoid activation functions. It can be further enhanced by incorporating additional features and techniques:
+
+1. Regularization:
+   - To prevent overfitting, regularization techniques like L1 or L2 regularization can be applied to the weights. This involves adding a penalty term to the loss function that encourages smaller weights.
+
+2. Batch Normalization:
+   - Batch normalization can be employed to improve the stability and convergence of the training process. It normalizes the activations of each layer across a mini-batch of training data.
+
+3. Momentum:
+   - Momentum can be incorporated into the weight update rule to accelerate the training process and avoid getting stuck in local minima. It adds a weighted average of previous weight updates to the current update.
+
+4. Adaptive Learning Rates:
+   - Instead of using a fixed learning rate, adaptive learning rate techniques like AdaGrad or Adam can be employed. These algorithms dynamically adjust the learning rate for each parameter based on its past gradients.
+
+5. Early Stopping:
+   - Early stopping can be implemented to prevent overfitting by monitoring the performance on a validation dataset and stopping the training when the validation error starts to increase.
+
+6. Dropout:
+   -  Dropout is a regularization technique that randomly drops out neurons during training, forcing the network to learn more robust representations. This helps to prevent overfitting and improve generalization performance.
+
+7. Cross-Validation:
+   - Cross-validation can be used to evaluate the performance of the trained model more accurately. This involves splitting the training data into multiple folds and training the model on different subsets while evaluating it on the remaining fold.
+
+8. Hyperparameter Optimization:
+   -Hyperparameter optimization techniques like grid search or random search can be used to find the optimal values for hyperparameters like learning rate, regularization strength, and network architecture.
+
+By incorporating these additional features and techniques, the neural network's performance and generalizability can be significantly improved.
