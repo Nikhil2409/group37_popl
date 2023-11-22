@@ -10,3 +10,9 @@ let training_inputs = vec![
         vec![1.0],
         vec![0.0],
     ];
+let test_inputs = vec![
+        vec![0.0, 0.0],
+        vec![0.0, 1.0],
+        vec![1.0, 0.0],
+        vec![1.0, 1.0],
+    ];
