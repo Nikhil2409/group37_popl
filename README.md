@@ -72,28 +72,28 @@ Code Reference:
   ![image](https://github.com/PreetShah67/group37_popl/assets/101982166/d1e25535-f39e-43df-ae58-24f3fd66db3a)
 
  4. Cross-Platform Compatibility:
-   Strengths:
-    - Rust is known for its focus on providing memory safety without sacrificing performance.
-    -Cargo, Rust's package manager, simplifies dependency management and project setup.
-    -Rust supports cross-compilation, allowing code to be compiled for different target platforms.
-   Considerations:
-    -Rust might have a steeper learning curve for developers unfamiliar with its ownership system.
-    -Cross-compilation might require additional configuration but is generally supported.
+     Strengths:
+     -Rust is known for its focus on providing memory safety without sacrificing performance.
+     -Cargo, Rust's package manager, simplifies dependency management and project setup.
+     -Rust supports cross-compilation, allowing code to be compiled for different target platforms.
+     Considerations:
+     -Rust might have a steeper learning curve for developers unfamiliar with its ownership system.
+     -Cross-compilation might require additional configuration but is generally supported.
 
 5. Development Productivity:
-  Strengths:
-   -Rust's ownership system helps prevent certain classes of bugs at compile time, enhancing code reliability.
-   -Cargo simplifies project management, dependency tracking, and building.
-   -Rust's focus on modern language features and safety contributes to code maintainability.
-  Considerations:
-   -Learning Rust's ownership system may initially slow down development for those unfamiliar with it.
+    Strengths:
+    -Rust's ownership system helps prevent certain classes of bugs at compile time, enhancing code reliability.
+    -Cargo simplifies project management, dependency tracking, and building.
+    -Rust's focus on modern language features and safety contributes to code maintainability.
+    Considerations:
+    -Learning Rust's ownership system may initially slow down development for those unfamiliar with it.
 
 6. Community Support
-  Strengths:
-   -The Rust community is known for being active, supportive, and focused on improving the language.
-   -The official documentation and resources for learning Rust are comprehensive.
-  Considerations:
-   -Rust's ecosystem for machine learning might not be as mature as that of C++.
+    Strengths:
+    -The Rust community is known for being active, supportive, and focused on improving the language.
+    -The official documentation and resources for learning Rust are comprehensive.
+    Considerations:
+    -Rust's ecosystem for machine learning might not be as mature as that of C++.
  
  C++ Code:
 
@@ -104,7 +104,7 @@ Code Reference:
  `void train(vector<vector<double>>& inputs, vector<vector<double>>& targets, size_t 
  epochs,
  double learning_rate) { /* ... */ }`
-   - Synchronization mechanisms, like mutexes, can be added as in the reference.
+    - Synchronization mechanisms, like mutexes, can be added as in the reference.
 Reference: [`std::mutex`](https://en.cppreference.com/w/cpp/thread/mutex).
 Code Reference:
 `void train(vector<vector<double>>& inputs, vector<vector<double>>& targets, size_t 
@@ -141,19 +141,19 @@ The accuracy is calculated based on a simple threshold (0.5) for binary classifi
     - Dependency management in C++ can be more manual compared to Rust's Cargo.
       
 5. Development Productivity:
-   Strengths:
-   - C++ provides a familiar syntax for many developers, potentially reducing the learning curve.
-   - The C++ ecosystem has a vast array of libraries and tools that can aid development.
-   Considerations:
-   - Memory-related issues, common in C++, can be challenging to debug.
-   - C++ may involve more manual memory management and error handling compared to Rust.
+    Strengths:
+    - C++ provides a familiar syntax for many developers, potentially reducing the learning curve.
+    - The C++ ecosystem has a vast array of libraries and tools that can aid development.
+    Considerations:
+    - Memory-related issues, common in C++, can be challenging to debug.
+    - C++ may involve more manual memory management and error handling compared to Rust.
 
 6. Community Support
-   Strengths:
-   - C++ has a vast and mature community with a wealth of resources and libraries for machine learning.
-   - Many popular machine learning frameworks and libraries (e.g., TensorFlow, PyTorch) provide C++ bindings.
-   Considerations:
-   - The sheer size of the C++ community can sometimes result in varied coding practices and standards.
+    Strengths:
+    - C++ has a vast and mature community with a wealth of resources and libraries for machine learning.
+    - Many popular machine learning frameworks and libraries (e.g., TensorFlow, PyTorch) provide C++ bindings.
+    Considerations:
+    - The sheer size of the C++ community can sometimes result in varied coding practices and standards.
 
 Conclusion:
   - Rust provides strong thread safety guarantees through its ownership system, and memory 
