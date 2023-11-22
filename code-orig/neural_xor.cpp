@@ -219,12 +219,23 @@ int main() {
     neural_network.train(training_inputs, training_targets, 10000, 0.1);
 
     auto training_duration = chrono::high_resolution_clock::now() - start_training;
+    vector<vector<double>> test_inputs = {
+        {0.0, 0.0},
+        {0.0, 1.0},
+        {1.0, 0.0},
+        {1.0, 1.0}
+    };
 
-    neural_network.plotPredictionsVsInputs(training_inputs, training_targets);
+    for (size_t i = 0; i < test_inputs.size(); ++i) {
+        vector<double> predictions = neural_network.predict(test_inputs[i]);
+        cout << "Input: {" << test_inputs[i][0] << ", " << test_inputs[i][1] << "} => Prediction: " << predictions[0] << endl;
+    }
+
+    neural_network.plotPredictionsVsInputs(test_inputs, training_targets);
 
     cout << "Training Time: " << chrono::duration_cast<chrono::milliseconds>(training_duration).count() << " ms\n";
 
-    neural_network.evaluatePerformance(training_inputs, training_targets);
+    neural_network.evaluatePerformance(test_inputs, training_targets);
 
     // Graph analysis - Plot the training loss graph
     system("gnuplot -p -e \"plot 'loss_data.txt' with lines title 'Training Loss Over Epochs'\"");
